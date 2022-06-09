@@ -1,0 +1,57 @@
+<odoo>
+    <data>
+    <record id="res1" model="odoo_3modelos.res">
+      <field name="name">Plaza Einstein</field>
+      <field name="mesas">12</field>
+    </record>
+    <record id="res2" model="odoo_3modelos.res">
+      <field name="name">Plaza Jesulin</field>
+      <field name="mesas">25</field>
+    </record>
+    <record id="res3" model="odoo_3modelos.res">
+      <field name="name">C/ Eustaquio</field>
+      <field name="mesas">9</field>
+    </record>
+
+    <record id="emp1" model="odoo_3modelos.emp">
+      <field name="dni">77244238R</field>
+      <field name="nom">Paco</field>
+      <field name="ape">Florero</field>
+      <field name="fecha">2018-01-07</field>
+      <field name="anios">42</field>
+      <field name="tipo">g</field>
+      <field name="res_id" ref="res1"></field>
+    </record>
+    <record id="emp2" model="odoo_3modelos.emp">
+      <field name="dni">84512238W</field>
+      <field name="nom">Juana</field>
+      <field name="ape">De Arco</field>
+      <field name="fecha">2020-07-07</field>
+      <field name="anios">30</field>
+      <field name="tipo">c</field>
+      <field name="res_id" ref="res1"></field>
+    </record>
+    <record id="emp3" model="odoo_3modelos.emp">
+      <field name="dni">86457884F</field>
+      <field name="nom">Adolfo</field>
+      <field name="ape">Flores</field>
+      <field name="fecha">2019-11-19</field>
+      <field name="anios">22</field>
+      <field name="tipo">b</field>
+      <field name="res_id" ref="res2"></field>
+    </record>
+
+    <record id="pro1" model="odoo_3modelos.pro">
+      <field name="nom">Hamburguesita Pollo</field>
+      <field name="coste">8.99</field>
+      <field name="res_id" ref="res2"></field>
+    </record>
+
+    <record id="pro1" model="odoo_3modelos.pro">
+      <field name="nom">Cubo de Pollo</field>
+      <field name="coste">12</field>
+      <field name="res_id" ref="res1"></field>
+    </record>
+
+    </data>
+</odoo>

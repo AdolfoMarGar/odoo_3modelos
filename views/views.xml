@@ -1,0 +1,160 @@
+<odoo>
+  <data>
+    <!-- vistas -->
+
+    <record model="ir.ui.view" id="odoo_3modelos.res_list_view">
+      <field name="name">odoo_3modelos.res.view.tree</field>
+      <field name="model">odoo_3modelos.res</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="mesas"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="odoo_3modelos.res_form_view">
+    <field name="name">odoo_3modelos.res.view.form</field>
+    <field name="model">odoo_3modelos.res</field>
+    <field name="arch" type="xml">
+      <form string="Formulario del restaurante">
+        <sheet>
+          <div class ="oe_title">
+            <h1>
+              <field name ="name" placeholder ="Direccion:"/>
+            </h1>
+          </div>
+          <group>
+            <group>
+              <separator string="Informacion general"/>
+              <field name="mesas"/>
+            </group>
+          </group>
+          <group>
+            <field name="empleados_ids"/>
+            <field name="productos_ids"/>
+          </group >
+        </sheet>
+      </form>
+    </field>
+    </record>
+    
+
+    <record model="ir.ui.view" id="odoo_3modelos.emp_list_view">
+      <field name="name">odoo_3modelos.emp.view.tree</field>
+      <field name="model">odoo_3modelos.emp</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="dni"/>
+          <field name="nom"/>
+          <field name="ape"/>
+          <field name="fecha"/>
+          <field name="anios"/>
+          <field name="tipo"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="odoo_3modelos.emp_form_view">
+    <field name="name">odoo_3modelos.emp.view.form</field>
+    <field name="model">odoo_3modelos.emp</field>
+    <field name="arch" type="xml">
+      <form string="Formulario del empleado">
+        <sheet>
+        <separator string = "Informacion del empleado"/>
+          <group>
+            <group>
+              <field name="dni"/>
+              <field name="nom"/>
+              <field name="ape"/>
+              <field name="fecha"/>
+              <field name="anios"/>
+            </group>
+          </group>
+          <group>
+            <field name="tipo"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+    </record>
+
+    <record model="ir.ui.view" id="odoo_3modelos.emp_search_view">
+      <field name="name">odoo_3modelos.emp.view.search</field>
+      <field name="model">odoo_3modelos.emp</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="dni"/>
+          <field name="nom"/>
+          <field name="ape"/>
+          <field name="tipo"/>
+
+          <group>
+            <filter name="group_by_tipo" string ="Tipò" context="{'group_by':'tipo'}"/>
+          </group>
+        </search>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="odoo_3modelos.pro_list_view">
+      <field name="name">odoo_3modelos.pro.view.tree</field>
+      <field name="model">odoo_3modelos.pro</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nom"/>
+          <field name="coste"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="odoo_3modelos.pro_form_view">
+    <field name="name">odoo_3modelos.pro.view.form</field>
+    <field name="model">odoo_3modelos.pro</field>
+    <field name="arch" type="xml">
+        <form string="Formulario del producto">
+          <sheet>
+          <separator string = "Informacion del producto"/>
+            <group>
+              <group>
+                <field name="nom"/>
+                <field name="coste"/>
+              </group>
+            </group>
+            <group>
+              <field name="res_id"/>
+            </group>         
+          </sheet>
+        </form>
+    </field>
+    </record>
+    
+    <!--Menu action-->
+    <record model="ir.actions.act_window" id="odoo_3modelos.res_action_window">
+      <field name="name">Restaurantes</field>
+      <field name="res_model">odoo_3modelos.res</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="odoo_3modelos.emp_action_window">
+      <field name="name">Empleados</field>
+      <field name="res_model">odoo_3modelos.emp</field>
+      <field name="view_mode">tree,form,search</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="odoo_3modelos.pro_action_window">
+      <field name="name">Productos</field>
+      <field name="res_model">odoo_3modelos.pro</field>
+      <field name="view_mode">tree,form,search</field>
+      <field name="context"> {'search_default_group_by_tipo':'False'}</field>
+    </record>
+
+    <!-- menus -->
+
+    <menuitem name="Restaurantes" id="odoo_3modelos.menu_root"/>
+
+    <menuitem name="Restaurantes" id="odoo_3modelos.res_menu" parent = 'odoo_3modelos.menu_root' action = 'odoo_3modelos.res_action_window'/>
+    <menuitem name="Empleados" id="odoo_3modelos.emp_menu" parent = 'odoo_3modelos.menu_root' action = 'odoo_3modelos.emp_action_window'/>
+    <menuitem name="Productos" id="odoo_3modelos.pro_menu" parent = 'odoo_3modelos.menu_root' action = 'odoo_3modelos.pro_action_window'/>
+
+  </data>
+</odoo>

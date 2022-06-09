@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_odoo_libre_pro_usuario,odoo_libre.pro.usuario,model_odoo_libre_pro,odoo_libre.group_garaje_usuario,1,1,1,1
+access_odoo_libre_emp_usuario,odoo_libre.emp.usuario,model_odoo_libre_emp,odoo_libre.group_garaje_usuario,1,1,1,1
+access_odoo_libre_res_usuario,odoo_libre.res.usuario,model_odoo_libre_res,odoo_libre.group_garaje_usuario,1,0,0,0
+access_odoo_libre_res_director,odoo_libre.res.director,model_odoo_libre_res,odoo_libre.group_garaje_usuario,1,1,1,1
