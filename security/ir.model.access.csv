@@ -1,5 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_odoo_libre_pro_usuario,odoo_libre.pro.usuario,model_odoo_libre_pro,odoo_libre.group_garaje_usuario,1,1,1,1
-access_odoo_libre_emp_usuario,odoo_libre.emp.usuario,model_odoo_libre_emp,odoo_libre.group_garaje_usuario,1,1,1,1
-access_odoo_libre_res_usuario,odoo_libre.res.usuario,model_odoo_libre_res,odoo_libre.group_garaje_usuario,1,0,0,0
-access_odoo_libre_res_director,odoo_libre.res.director,model_odoo_libre_res,odoo_libre.group_garaje_usuario,1,1,1,1
+access_odoo_3modelos_pro_empleado,odoo_3modelos.pro.empleado,model_odoo_3modelos_pro,odoo_3modelos.group_res_empleado,1,0,0,0
+access_odoo_3modelos_emp_empleado,odoo_3modelos.emp.empleado,model_odoo_3modelos_emp,odoo_3modelos.group_res_empleado,1,1,1,1
+access_odoo_3modelos_res_empleado,odoo_3modelos.res.empleado,model_odoo_3modelos_res,odoo_3modelos.group_res_empleado,1,1,1,1
+access_odoo_3modelos_res_gerente,odoo_3modelos.res.gerente,model_odoo_3modelos_res,odoo_3modelos.group_res_gerente,1,1,1,1

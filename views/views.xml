@@ -139,13 +139,14 @@
       <field name="name">Empleados</field>
       <field name="res_model">odoo_3modelos.emp</field>
       <field name="view_mode">tree,form,search</field>
+      <field name="context"> {'search_default_group_by_tipo':'False'}</field>
+
     </record>
 
     <record model="ir.actions.act_window" id="odoo_3modelos.pro_action_window">
       <field name="name">Productos</field>
       <field name="res_model">odoo_3modelos.pro</field>
-      <field name="view_mode">tree,form,search</field>
-      <field name="context"> {'search_default_group_by_tipo':'False'}</field>
+      <field name="view_mode">tree,form</field>
     </record>
 
     <!-- menus -->
